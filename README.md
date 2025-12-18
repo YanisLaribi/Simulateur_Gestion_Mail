@@ -50,4 +50,96 @@ Le système repose sur une architecture **client / serveur TCP (IPv4)** et perme
 ---
 
 ## 🗂️ Structure du projet
+## 🗂️ Structure du projet
 
+```text
+Simulateur_Gestion_Mail/
+│
+├── TP4_client.py        # Client de messagerie
+├── TP4_server.py        # Serveur de courriels
+├── glosocket.py         # Module réseau fourni (obligatoire)
+├── gloutils.py          # Constantes, gabarits et structures
+│
+├── server_data/         # Données persistantes du serveur
+│   ├── lost/            # Courriels non livrés
+│   └── <utilisateurs>/ # Dossiers utilisateurs
+│
+└── README.md
+```
+---
+
+## ▶️ Exécution du projet
+
+### 1️⃣ Lancer le serveur
+```bash
+python TP4_server.py
+```
+
+### 2️⃣ Lancer un client
+```bash
+python TP4_client.py -d 127.0.0.1
+```
+
+---
+
+## 🧭 Menus disponibles
+
+### Menu de connexion
+- Créer un compte
+- Se connecter
+- Quitter
+
+### Menu principal
+- Consultation de courriels
+- Envoi de courriels
+- Statistiques
+- Se déconnecter
+
+---
+
+## 🔐 Sécurité et bonnes pratiques
+
+- Hachage sécurisé des mots de passe (`hashlib.sha3_512`)
+- Comparaison sécurisée (`hmac.compare_digest`)
+- Aucune utilisation de `except:` générique
+- Validation stricte des entrées utilisateur
+- Séparation claire client / serveur
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Langage** : Python 3
+- **Réseau** : sockets TCP (IPv4)
+- **Modules standards** :
+  - `socket`, `select`
+  - `hashlib`, `hmac`
+  - `json`, `os`, `pathlib`
+  - `getpass`
+- **Modules fournis** :
+  - `glosocket`
+  - `gloutils`
+
+---
+
+## ⚠️ Contraintes importantes
+
+- Le projet est conçu pour fonctionner **dans la machine virtuelle du cours**
+- Les modules `glosocket` et `gloutils` **ne doivent pas être modifiés**
+- Le format des messages doit être respecté strictement
+- Toute fonctionnalité non fonctionnelle dans la VM est considérée comme absente
+
+---
+
+## 👨‍💻 Auteur
+
+- **Yanis Laribi**  
+- Étudiant en génie logiciel  
+- Université Laval  
+
+---
+
+## 📄 Licence
+
+Projet académique réalisé à des fins pédagogiques dans le cadre du cours **GLO-2000**.  
+Toute réutilisation doit respecter les règles et politiques académiques associées.
