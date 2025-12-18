@@ -50,7 +50,6 @@ Le système repose sur une architecture **client / serveur TCP (IPv4)** et perme
 ---
 
 ## 🗂️ Structure du projet
-## 🗂️ Structure du projet
 
 ```text
 Simulateur_Gestion_Mail/
