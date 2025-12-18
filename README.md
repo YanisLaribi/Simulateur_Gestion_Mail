@@ -54,8 +54,8 @@ Le système repose sur une architecture **client / serveur TCP (IPv4)** et perme
 ```text
 Simulateur_Gestion_Mail/
 │
-├── TP4_client.py        # Client de messagerie
-├── TP4_server.py        # Serveur de courriels
+├── Client.py        # Client de messagerie
+├── Server.py        # Serveur de courriels
 ├── glosocket.py         # Module réseau fourni (obligatoire)
 ├── gloutils.py          # Constantes, gabarits et structures
 │
